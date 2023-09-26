@@ -1,9 +1,0 @@
-
-g	java:S116"RRename this field "task_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÊƒËŠ
-o	java:S116"URename this field "task_stage" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ã¾¹»ıÿÿÿÿ
-q	java:S116"WRename this field "schedule_log" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(üƒÑ™ûÿÿÿÿ
-l	java:S116"WRename this field "task_context" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(†‚‹¤
-o	java:S116"URename this field "order_time" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼Ü’¾şÿÿÿÿ
-r	java:S116"XRename this field "crt_retry_num" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(û´óúÿÿÿÿ
-l	java:S116"XRename this field "max_retry_num" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£ğ
-w	java:S116"]Rename this field "max_retry_interval" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”™—ùùÿÿÿÿ

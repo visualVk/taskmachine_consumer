@@ -4,11 +4,6 @@ import org.redisson.Redisson;
 import org.redisson.api.RedissonClient;
 import org.redisson.config.Config;
 
-/**
- * @author visualvk
- * @data 2023/9/25
- * @apiNote
- */
 public class RedissonLock {
 
     private static class Holder {

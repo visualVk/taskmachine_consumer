@@ -1,17 +1,0 @@
-
-`	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ÿ³È¦ÿÿÿÿÿ
-o	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(µÂØó
-l	java:S116"WRename this field "LOCK_SUCCESS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Çé™¼
-n	java:S116"YRename this field "UNLOCK_SUCCESS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(òÊŒÇ
-7
-java:S1170"!Make this final field static too.(Çé™¼
-7
-java:S1170"!Make this final field static too.(òÊŒÇ
-7
-java:S1170"!Make this final field static too.(°ÔÂ¹
-[
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(µÂØó
-t
-java:S2142/"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ä ¹€
-W
-java:S1126:"AReplace this if-then-else statement by a single return statement.(£è‘×

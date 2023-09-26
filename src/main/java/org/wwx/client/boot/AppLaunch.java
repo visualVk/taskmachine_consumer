@@ -1,9 +1,9 @@
 package org.wwx.client.boot;
 
 import com.alibaba.fastjson.JSON;
-import com.sun.org.slf4j.internal.Logger;
-import com.sun.org.slf4j.internal.LoggerFactory;
 import org.redisson.api.RLock;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.wwx.client.Client.TaskMachineProducer;
 import org.wwx.client.Client.TaskMachineProducerImpl;
 import org.wwx.client.constant.TaskConstant;
@@ -15,7 +15,6 @@ import org.wwx.client.enums.TaskStatus;
 import org.wwx.client.lock.RedissonLock;
 import org.wwx.client.task.TaskBuilder;
 import org.wwx.client.task.TaskRet;
-import org.wwx.client.task.TestTask;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -52,16 +51,14 @@ public class AppLaunch implements Launch{
 
 
     public AppLaunch() {
-        this(0);
+        this(0, new ArrayList<>());
     }
-    public AppLaunch(int scheduleLimit) {
+    public AppLaunch(int scheduleLimit, ArrayList<Class> taskTypesList) {
         scheduleCfgDic = new ConcurrentHashMap<>();
 
         loadPool = Executors.newScheduledThreadPool(1);
         taskMachineProducer = new TaskMachineProducerImpl();
-        taskTypes = new ArrayList<Class>() {{
-            add(TestTask.class);
-        }};
+        taskTypes = taskTypesList;
         this.packageName = taskTypes.get(0).getPackage().getName();
         this.scheduleLimit = scheduleLimit;
         observerManager = new ObserverManager();
@@ -76,6 +73,7 @@ public class AppLaunch implements Launch{
     // 启动：拉取任务
     @Override
     public int start() {
+        // 根据支持列表中的任务类型，逐一拉取
         int i = offset.get() == taskTypes.size() - 1 ? 0 : offset.incrementAndGet();
         Class taskType = taskTypes.get(offset.getAndSet(i));
         // 读取对应任务配置信息
