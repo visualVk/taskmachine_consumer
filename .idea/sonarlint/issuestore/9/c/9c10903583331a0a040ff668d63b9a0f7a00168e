@@ -1,0 +1,13 @@
+
+l	java:S116"RRename this field "user_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ı¨œ°ÿÿÿÿÿ
+g	java:S116"RRename this field "task_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÊƒËŠ
+n	java:S116"TRename this field "task_type" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(úÖêıÿÿÿÿ
+o	java:S116"URename this field "task_stage" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(úö² şÿÿÿÿ
+r	java:S116"XRename this field "crt_retry_num" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(û´óúÿÿÿÿ
+l	java:S116"XRename this field "max_retry_num" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£ğ
+o	java:S116"URename this field "order_time" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼Ü’¾şÿÿÿÿ
+w	java:S116"]Rename this field "max_retry_interval" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’öÓûÿÿÿÿÿ
+q	java:S116"WRename this field "schedule_log" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²¾€ãúÿÿÿÿ
+q	java:S116!"WRename this field "task_context" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ºú€Àşÿÿÿÿ
+p	java:S116#"VRename this field "create_time" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´ßı‡ùÿÿÿÿ
+p	java:S116%"VRename this field "modify_time" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ºøÆÏúÿÿÿÿ

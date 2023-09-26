@@ -1,0 +1,9 @@
+
+i	java:S116"TRename this field "task_type" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆŸİ‘
+s	java:S116"YRename this field "schedule_limit" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(íÆ–´ûÿÿÿÿ
+v	java:S116"\Rename this field "schedule_interval" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(êìßÿÿÿÿÿ
+x	java:S116"^Rename this field "max_processing_time" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§•õÔùÿÿÿÿ
+l	java:S116"XRename this field "max_retry_num" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²í—5
+s	java:S116"YRename this field "retry_interval" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥Ë Èúÿÿÿÿ
+k	java:S116"VRename this field "create_time" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(†¦Ù
+p	java:S116"VRename this field "modify_time" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ºøÆÏúÿÿÿÿ
