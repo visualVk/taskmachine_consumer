@@ -3,6 +3,7 @@ package org.wwx.client.lock;
 import org.redisson.Redisson;
 import org.redisson.api.RedissonClient;
 import org.redisson.config.Config;
+import org.wwx.client.constant.LockConfig;
 
 public class RedissonLock {
 
@@ -11,8 +12,9 @@ public class RedissonLock {
 
         private static RedissonClient createClient(){
             Config config = new Config();
+            String redisAddress = "redis://" + LockConfig.REDIS_URL;
             config.useSingleServer()
-                    .setAddress("redis://42.192.211.121:32008");
+                    .setAddress(redisAddress);
             return Redisson.create(config);
         }
     }
