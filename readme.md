@@ -6,7 +6,7 @@
 
 ## 预备工作
 
-1. 部署TaskMachine Server（跳过，已部署在服务器上）
+1. 部署TaskMachine Producer（跳过，已部署在服务器上）
 
 2. 自定义任务，如task/TestTask
 
