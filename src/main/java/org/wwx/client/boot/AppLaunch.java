@@ -74,8 +74,8 @@ public class AppLaunch implements Launch{
     @Override
     public int start() {
         // 根据支持列表中的任务类型，逐一拉取
-        int i = offset.get() == taskTypes.size() - 1 ? 0 : offset.incrementAndGet();
-        Class taskType = taskTypes.get(offset.getAndSet(i));
+        int i = offset.incrementAndGet();
+        Class taskType = taskTypes.get(i % taskTypes.size());
         // 读取对应任务配置信息
         ScheduleConfig scheduleConfig = scheduleCfgDic.get(taskType.getSimpleName());
         // 如果用户没有配置时间间隔就使用默认时间间隔
@@ -83,6 +83,8 @@ public class AppLaunch implements Launch{
         this.threadPoolExecutor = new ThreadPoolExecutor(concurrentRunTimes, MaxConcurrentRunTimes, intervalTime + 1, TimeUnit.SECONDS, new LinkedBlockingQueue<>(UserConfig.QUEUE_SIZE));
         for(;;) {
             // consumer堆积任务，停止拉取，只消费
+            i = offset.getAndIncrement() % taskTypes.size();
+            taskType = taskTypes.get(i);
             if (UserConfig.QUEUE_SIZE - threadPoolExecutor.getQueue().size() >= scheduleLimit) {
                 execute(taskType);
             }
@@ -92,7 +94,7 @@ public class AppLaunch implements Launch{
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-
+            scheduleConfig = scheduleCfgDic.get(taskType.getSimpleName());
         }
     }
 
