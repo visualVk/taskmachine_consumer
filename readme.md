@@ -1,5 +1,19 @@
 # TaskMachine Consumer的一些指南
 
+## 尝试
+[TaskMachine Producer Swagger接口网址](http://42.192.211.121:8081/apis)
+
+[TaskMachine 监控页面（未全部可视化）](http://42.1912.211.121:8083/taskmachine)
+
+### TaskMachine监控页面待完成
+
+- [x] 监控任务
+- [x] 新建任务
+- [ ] 监控任务配置文件
+- [ ] 新增任务配文件
+- [ ] 监控分表配置文件
+- [ ] 
+
 ## 调用接口
 
 **可以在constant/TaskUrl中配置请求IP**
