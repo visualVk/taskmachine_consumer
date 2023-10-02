@@ -52,5 +52,45 @@
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
+    <build>
+        <!--<plugins>-->
+        <!--    &lt;!&ndash;<plugin>&ndash;&gt;-->
+        <!--    &lt;!&ndash;    <groupId>org.apache.maven.plugins</groupId>&ndash;&gt;-->
+        <!--    &lt;!&ndash;    <artifactId>maven-jar-plugin</artifactId>&ndash;&gt;-->
+        <!--    &lt;!&ndash;    <version>3.2.0</version>&ndash;&gt;-->
+        <!--    &lt;!&ndash;    <configuration>&ndash;&gt;-->
+        <!--    &lt;!&ndash;        <archive>&ndash;&gt;-->
+        <!--    &lt;!&ndash;            <manifest>&ndash;&gt;-->
+        <!--    &lt;!&ndash;                <mainClass>org.wwx.client.Main</mainClass>&ndash;&gt;-->
+        <!--    &lt;!&ndash;            </manifest>&ndash;&gt;-->
+        <!--    &lt;!&ndash;        </archive>&ndash;&gt;-->
+        <!--    &lt;!&ndash;    </configuration>&ndash;&gt;-->
+        <!--    &lt;!&ndash;</plugin>&ndash;&gt;-->
+        <!--    -->
+        <!--</plugins>-->
+        <plugins>
+            <!-- 其他插件配置 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.2.4</version>
+                <configuration>
+                    <createDependencyReducedPom>false</createDependencyReducedPom>
+                    <transformers>
+                        <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                            <mainClass>org.wwx.client.Main</mainClass>
+                        </transformer>
+                    </transformers>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>
